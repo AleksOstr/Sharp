@@ -3,7 +3,7 @@
 Console.WriteLine("Введите ваше имя ");
 string userName = Console.ReadLine();
 
-if(userName == "Алексей")
+if(userName.ToLower == "алексей")
 {
     Console.WriteLine("Добро пожаловать домой!");
 }
