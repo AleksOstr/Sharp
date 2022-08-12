@@ -3,8 +3,15 @@ Console.WriteLine("Введите число");
 int n = Convert.ToInt32(Console.ReadLine());
 int index = 1;
 
-while (index <= n)
+if (n <= 0)
 {
-    Console.Write($"{Math.Pow(index, 3)} ");
-    index++;
+    Console.WriteLine("Число не может быть меньше 1");
+}
+else
+{
+    while (index <= n)
+    {
+        Console.Write($"{Math.Pow(index, 3)} ");
+        index++;
+    }
 }
