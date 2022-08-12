@@ -5,6 +5,6 @@ int index = 1;
 
 while (index <= n)
 {
-    Console.Write($"{Convert.ToInt32(Math.Pow(index, 3))} ");
+    Console.Write($"{Math.Pow(index, 3)} ");
     index++;
 }
