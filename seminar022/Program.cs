@@ -32,7 +32,9 @@ string FindInArray(int[] arr, int number)
 
 int[] randomArray = new int[10];
 
+Console.WriteLine("Введите искомое число");
+int num = Convert.ToInt32(Console.ReadLine());
 FillArray(randomArray);
 PrintArray(randomArray);
 Console.WriteLine();
-Console.WriteLine(FindInArray(randomArray, 5));
+Console.WriteLine(FindInArray(randomArray, num));
