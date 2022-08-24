@@ -21,7 +21,7 @@ void PrintMatrix(double[,] matrix)                                              
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write($"{matrix[i, j]} ");
+            Console.Write($"[{matrix[i, j]}] ");
         }
         Console.WriteLine();
     }
@@ -29,18 +29,18 @@ void PrintMatrix(double[,] matrix)                                              
 
 Console.WriteLine("Задайте количество строк");                                  // Задаем размеры массива, заполняем его данными и выводим на экран
 int m = Convert.ToInt32(Console.ReadLine());
-while (m < 0)
+while (m < 2)
 {
-    Console.WriteLine("Количество строк не может быть меньше 0");
+    Console.WriteLine("Количество строк не может быть меньше 2");
     Console.WriteLine("Повторите ввод значения");
     m = Convert.ToInt32(Console.ReadLine());
 }
 
 Console.WriteLine("Задайте количество столбцов");
 int n = Convert.ToInt32(Console.ReadLine());
-while (n < 0)
+while (n < 1)
 {
-    Console.WriteLine("Количество столбцов не может быть меньше 0");
+    Console.WriteLine("Количество столбцов не может быть меньше 1");
     Console.WriteLine("Повторите ввод значения");
     n = Convert.ToInt32(Console.ReadLine());
 }
