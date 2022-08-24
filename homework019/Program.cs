@@ -38,9 +38,9 @@ while (m < 2)
 
 Console.WriteLine("Задайте количество столбцов");
 int n = Convert.ToInt32(Console.ReadLine());
-while (n < 1)
+while (n < 2)
 {
-    Console.WriteLine("Количество столбцов не может быть меньше 1");
+    Console.WriteLine("Количество столбцов не может быть меньше 2");
     Console.WriteLine("Повторите ввод значения");
     n = Convert.ToInt32(Console.ReadLine());
 }
