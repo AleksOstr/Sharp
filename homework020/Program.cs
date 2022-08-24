@@ -20,7 +20,7 @@ void PrintMatrix(int[,] matrix)                             // Вывод мас
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write($"{matrix[i, j]} ");
+            Console.Write($"[{matrix[i, j]}] ");
         }
         Console.WriteLine();
     }
@@ -38,8 +38,20 @@ int FindInMatrix(int[,] matrix, int row, int col)           // Поиск эле
 
 Console.WriteLine("Задайте количество строк массива");      // Задаем размеры матрицы и заполняем случайными числами
 int rows = Convert.ToInt32(Console.ReadLine());
+while (rows < 2)
+{
+    Console.WriteLine("Количество строк не может быть меньше 2");
+    Console.WriteLine("Повторите ввод значения");
+    rows = Convert.ToInt32(Console.ReadLine());
+}
 Console.WriteLine("Задайте количество столбцов массива");
 int cols = Convert.ToInt32(Console.ReadLine());
+while (cols < 1)
+{
+    Console.WriteLine("Количество столбцов не может быть меньше 1");
+    Console.WriteLine("Повторите ввод значения");
+    cols = Convert.ToInt32(Console.ReadLine());
+}
 int[,] numbers = new int[rows, cols];
 FillMatrix(numbers);
 
