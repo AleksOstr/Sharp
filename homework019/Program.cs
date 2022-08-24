@@ -3,7 +3,7 @@
 
 Console.Clear();
 
-void FillMatrix(double[,] matrix)
+void FillMatrix(double[,] matrix)                                               // Заполнение массива случайными вещественными числами
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
@@ -15,7 +15,7 @@ void FillMatrix(double[,] matrix)
     }
 }
 
-void PrintMatrix(double[,] matrix)
+void PrintMatrix(double[,] matrix)                                              // Вывод массива на экран
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
@@ -27,7 +27,7 @@ void PrintMatrix(double[,] matrix)
     }
 }
 
-Console.WriteLine("Задайте количество строк");
+Console.WriteLine("Задайте количество строк");                                  // Задаем размеры массива, заполняем его данными и выводим на экран
 int m = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Задайте количество столбцов");
