@@ -46,9 +46,9 @@ while (rows < 2)
 }
 Console.WriteLine("Задайте количество столбцов массива");
 int cols = Convert.ToInt32(Console.ReadLine());
-while (cols < 1)
+while (cols < 2)
 {
-    Console.WriteLine("Количество столбцов не может быть меньше 1");
+    Console.WriteLine("Количество столбцов не может быть меньше 2");
     Console.WriteLine("Повторите ввод значения");
     cols = Convert.ToInt32(Console.ReadLine());
 }
