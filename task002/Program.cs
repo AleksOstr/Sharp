@@ -51,8 +51,8 @@ int[,] numbers = new int[rows, cols];
 FillMatrix(numbers);
 PrintMatrix(numbers);
 
-int maxElement = numbers[0, 0];
-int minElement = numbers[0, 0];
+int maxElement = numbers[0, 0];                                              // Ищем значенияи координаты максимального и минимального элемента
+int minElement = numbers[0, 0];                                              
 string maxIndex = "";
 string minIndex = "";
 for (int i = 0; i < numbers.GetLength(0); i++)
