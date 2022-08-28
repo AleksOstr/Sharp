@@ -44,7 +44,7 @@ while (cols < 2)
 int[,] numbers = new int[rows, cols];
 FillMatrix(numbers);
 PrintMatrix(numbers);
-
+Console.Write("Среднее арифметическое каждого столбца ");
 int[] average = new int[cols];
 
 for (int i = 0; i < numbers.GetLength(1); i++)
