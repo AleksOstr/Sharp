@@ -27,24 +27,8 @@ void PrintMatrix(double[,] matrix)                                              
     }
 }
 
-Console.WriteLine("Задайте количество строк");                                  // Задаем размеры массива, заполняем его данными и выводим на экран
-int m = Convert.ToInt32(Console.ReadLine());
-while (m < 2)
-{
-    Console.WriteLine("Количество строк не может быть меньше 2");
-    Console.WriteLine("Повторите ввод значения");
-    m = Convert.ToInt32(Console.ReadLine());
-}
-
-Console.WriteLine("Задайте количество столбцов");
-int n = Convert.ToInt32(Console.ReadLine());
-while (n < 2)
-{
-    Console.WriteLine("Количество столбцов не может быть меньше 2");
-    Console.WriteLine("Повторите ввод значения");
-    n = Convert.ToInt32(Console.ReadLine());
-}
-
+int m = new Random().Next(2, 11);
+int n = new Random().Next(2, 11);
 double[,] numbers = new double[m, n];
 FillMatrix(numbers);
 PrintMatrix(numbers);
