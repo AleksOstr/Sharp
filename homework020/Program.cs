@@ -62,5 +62,4 @@ Console.Write("Строка: ");
 int numRow = Convert.ToInt32(Console.ReadLine());
 Console.Write("Столбец: ");
 int numCol = Convert.ToInt32(Console.ReadLine());
-
 Console.WriteLine(FindInMatrix(numbers, numRow, numCol));
