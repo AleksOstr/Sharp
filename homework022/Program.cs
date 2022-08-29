@@ -42,22 +42,8 @@ void SortMatrixRowsMaxToMin(int[,] matrix)
     }
 }
 
-Console.WriteLine("Задайте количество строк массива");      // Задаем размеры матрицы и заполняем случайными числами
-int rows = Convert.ToInt32(Console.ReadLine());
-while (rows < 2)
-{
-    Console.WriteLine("Количество строк не может быть меньше 2");
-    Console.WriteLine("Повторите ввод значения");
-    rows = Convert.ToInt32(Console.ReadLine());
-}
-Console.WriteLine("Задайте количество столбцов массива");
-int cols = Convert.ToInt32(Console.ReadLine());
-while (cols < 2)
-{
-    Console.WriteLine("Количество столбцов не может быть меньше 2");
-    Console.WriteLine("Повторите ввод значения");
-    cols = Convert.ToInt32(Console.ReadLine());
-}
+int rows = new Random().Next(3, 11);
+int cols = new Random().Next(2, 10);
 int[,] numbers = new int[rows, cols];
 FillMatrix(numbers);
 PrintMatrix(numbers);
