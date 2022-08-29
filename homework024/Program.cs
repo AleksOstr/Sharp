@@ -28,9 +28,9 @@ void MatrixMultiplication(int[,] matrixA, int[,] matrixB)   // Умножени�
     int[,] matrixC = new int[matrixA.GetLength(0), matrixB.GetLength(1)];
     for (int i = 0; i < matrixA.GetLength(0); i++)
     {
-        for (int j = 0; j < matrixA.GetLength(1); j++)
+        for (int j = 0; j < matrixB.GetLength(1); j++)
         {
-            for (int k = 0; k < matrixA.GetLength(1); k++)
+            for (int k = 0; k < matrixB.GetLength(0); k++)
             {
                 matrixC[i, j] += matrixA[i, k] * matrixB[k, j];
             }
@@ -40,43 +40,15 @@ void MatrixMultiplication(int[,] matrixA, int[,] matrixB)   // Умножени�
     }
 }
 
-Console.WriteLine("Задайте количество строк первой матрицы");      // Задаем размеры матрицы и заполняем случайными числами
-int rowsA = Convert.ToInt32(Console.ReadLine());
-while (rowsA < 2)
-{
-    Console.WriteLine("Количество строк не может быть меньше 2");
-    Console.WriteLine("Повторите ввод значения");
-    rowsA = Convert.ToInt32(Console.ReadLine());
-}
-Console.WriteLine("Задайте количество столбцов первой матрицы");
-int colsA = Convert.ToInt32(Console.ReadLine());
-while (colsA < 2)
-{
-    Console.WriteLine("Количество столбцов не может быть меньше 2");
-    Console.WriteLine("Повторите ввод значения");
-    colsA = Convert.ToInt32(Console.ReadLine());
-}
+int rowsA = new Random().Next(2, 4);
+int colsA = new Random().Next(2, 4);
 int[,] numbersA = new int[rowsA, colsA];
 FillMatrix(numbersA);
 PrintMatrix(numbersA);
 Console.WriteLine();
 
-Console.WriteLine("Задайте количество строк второй матрицы");      
-int rowsB = Convert.ToInt32(Console.ReadLine());
-while (rowsB < 2)
-{
-    Console.WriteLine("Количество строк не может быть меньше 2");
-    Console.WriteLine("Повторите ввод значения");
-    rowsB = Convert.ToInt32(Console.ReadLine());
-}
-Console.WriteLine("Задайте количество столбцов второй матрицы");
-int colsB = Convert.ToInt32(Console.ReadLine());
-while (colsB < 2)
-{
-    Console.WriteLine("Количество столбцов не может быть меньше 2");
-    Console.WriteLine("Повторите ввод значения");
-    colsB = Convert.ToInt32(Console.ReadLine());
-}
+int rowsB = new Random().Next(2, 4);
+int colsB = new Random().Next(2, 4);
 int[,] numbersB = new int[rowsB, colsB];
 FillMatrix(numbersB);
 PrintMatrix(numbersB);
