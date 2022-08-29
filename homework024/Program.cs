@@ -25,19 +25,24 @@ void PrintMatrix(int[,] matrix)                             // Вывод мас
 }
 void MatrixMultiplication(int[,] matrixA, int[,] matrixB)   // Умножение матрицы А на матрицу В
 {
-    int[,] matrixC = new int[matrixA.GetLength(0), matrixB.GetLength(1)];
-    for (int i = 0; i < matrixA.GetLength(0); i++)
+    if (matrixA.GetLength(1) == matrixB.GetLength(0))
     {
-        for (int j = 0; j < matrixB.GetLength(1); j++)
+        int[,] matrixC = new int[matrixA.GetLength(0), matrixB.GetLength(1)];
+        for (int i = 0; i < matrixA.GetLength(0); i++)
         {
-            for (int k = 0; k < matrixB.GetLength(0); k++)
+            for (int j = 0; j < matrixB.GetLength(1); j++)
             {
-                matrixC[i, j] += matrixA[i, k] * matrixB[k, j];
+                for (int k = 0; k < matrixB.GetLength(0); k++)
+                {
+                    matrixC[i, j] += matrixA[i, k] * matrixB[k, j];
+                }
+                Console.Write($"[{matrixC[i, j]}] ");
             }
-            Console.Write($"[{matrixC[i, j]}]");
+            Console.WriteLine();
         }
-        Console.WriteLine();
     }
+    else Console.WriteLine("Умножение матриц невозможно, т.к. количество столбцов первой матрицы "
+                        + "неравно количеству строк второй матрицы");
 }
 
 int rowsA = new Random().Next(2, 4);
@@ -53,7 +58,4 @@ int[,] numbersB = new int[rowsB, colsB];
 FillMatrix(numbersB);
 PrintMatrix(numbersB);
 Console.WriteLine();
-
-if (colsA == rowsB) MatrixMultiplication(numbersA, numbersB);
-else Console.WriteLine("Умножение матриц невозможно, т.к. количество столбцов первой матрицы "
-                        + "неравно количеству строк второй матрицы");
+MatrixMultiplication(numbersA, numbersB);
