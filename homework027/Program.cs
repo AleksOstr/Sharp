@@ -1,24 +1,14 @@
 ﻿// Задача 64: Задайте значения M и N. Напишите программу, которая выведет все натуральные числа в промежутке от M до N.
 Console.Clear();
-var rand = new Random();
-int m = rand.Next(1, 101);
-int n = rand.Next(1, 101);
-Console.WriteLine($"M = {m} N = {n}");
-if (m > n)
+void NumbersFormMToN(int m, int n)
 {
-    for (int i = n; i <= m; i++)
+    if (n != m)
     {
-        Console.Write($"{i} ");
+       NumbersFormMToN(m, n - 1);
     }
+    Console.Write($"{n} ");
 }
-else if (n > m)
-{
-    for (int i = m; i <= n; i++)
-    {
-        Console.Write($"{i} ");
-    }
-}
-else if (m == n)
-{
-    Console.WriteLine("Числа равны");
-}
+
+int a = new Random().Next(1, 11);
+int b = new Random().Next(15, 21);
+NumbersFormMToN(a, b);
